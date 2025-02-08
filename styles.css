@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* First Page */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #d63384;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#yes-btn {
+    background-color: #ff99cc;
+    color: white;
+}
+
+#no-btn {
+    background-color: #ff66a3;
+    color: white;
+}
+
+/* Ensures "Oops, wrong button" is hidden by default */
+.message-box {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: 2px solid #ff66a3;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Envelope Page */
+.envelope img {
+    width: 90vw; /* 90% of the screen width */
+    max-width: 600px; /* Prevents it from being too big */
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Moving Hearts Animation */
+.heart-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #ffb3c6;
+}
+
+.heart-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    font-family: 'Pacifico', cursive;
+}
+
+@keyframes floating {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    animation: floating 5s linear infinite;
+    opacity: 0.8;
+}
+
+.heart:nth-child(odd) { font-size: 40px; }
+.heart:nth-child(even) { font-size: 30px; }
